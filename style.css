@@ -1,0 +1,35 @@
+body
+ { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; }
+.container
+ { max-width: 500px; margin: 40px auto; background: #fff; padding: 2rem 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.header
+ { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+.user-info
+ { font-size: 0.9rem; color: #555; }
+.user-info span
+ { font-weight: bold; color: #333; }
+#logout-btn
+ { background: #ff3b30; color: white; border: none; border-radius: 5px; padding: 8px 15px; cursor: pointer; font-size: 0.9rem; }
+h1
+ { text-align: center; margin-bottom: 1.5rem; }
+#message
+ { margin-bottom: 1rem; text-align: center; font-weight: bold; }
+.slots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+.slot { padding: 1rem; border-radius: 8px; background: #f1f3f4; display: flex; flex-direction: column; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+.slot.available { background: #e6f9ed; border: 1px solid #34c759; }
+.slot.booked { background: #ffeaea; border: 1px solid #ff3b30; }
+.slot .time { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.slot .name { font-size: 0.95rem; color: #555; margin-bottom: 0.2rem; }
+.slot .booked-by { font-size: 0.8rem; color: #777; font-style: italic; margin-bottom: 0.5rem; }
+.slot button { padding: 0.4rem 1rem; border: none; border-radius: 5px; cursor: pointer; font-size: 0.95rem; margin-top: 0.2rem; }
+.slot button.book { background: #34c759; color: #fff; }
+.slot button.cancel { background: #ff3b30; color: #fff; }
+.slot button:disabled { background: #ccc; cursor: not-allowed; }
+.modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 10; }
+.modal.hidden { display: none; }
+.modal-content { background: #fff; padding: 2rem 1.5rem; border-radius: 10px; min-width: 300px; position: relative; }
+.close { position: absolute; top: 10px; right: 18px; font-size: 1.5rem; cursor: pointer; color: #888; }
+#form-book { display: flex; flex-direction: column; gap: 1rem; }
+#form-book input { padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; }
+#form-book button { background: #34c759; color: #fff; border: none; border-radius: 5px; padding: 0.5rem 0; font-size: 1rem; cursor: pointer; }
+@media (max-width: 600px) { .container { padding: 1rem 0.5rem; } .modal-content { min-width: 90vw; } }
